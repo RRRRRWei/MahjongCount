@@ -50,25 +50,25 @@
             this.User4Win = new System.Windows.Forms.Button();
             this.User4Chuck = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblUser1SelfDrawnLossTimes = new System.Windows.Forms.Label();
             this.lblUser1SelfDrawnWinTimes = new System.Windows.Forms.Label();
             this.lblUser1WinTimes = new System.Windows.Forms.Label();
             this.lblUser1ChuckTimes = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblUser2SelfDrawnLossTimes = new System.Windows.Forms.Label();
             this.lblUser2SelfDrawnWinTimes = new System.Windows.Forms.Label();
             this.lblUser2WinTimes = new System.Windows.Forms.Label();
             this.lblUser2ChuckTimes = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblUser3SelfDrawnLossTimes = new System.Windows.Forms.Label();
             this.lblUser3SelfDrawnWinTimes = new System.Windows.Forms.Label();
             this.lblUser3WinTimes = new System.Windows.Forms.Label();
             this.lblUser3ChuckTimes = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblUser4SelfDrawnLossTimes = new System.Windows.Forms.Label();
             this.lblUser4SelfDrawnWinTimes = new System.Windows.Forms.Label();
             this.lblUser4ChuckTimes = new System.Windows.Forms.Label();
             this.lblUser4WinTimes = new System.Windows.Forms.Label();
-            this.lblUser1SelfDrawnLossTimes = new System.Windows.Forms.Label();
-            this.lblUser2SelfDrawnLossTimes = new System.Windows.Forms.Label();
-            this.lblUser3SelfDrawnLossTimes = new System.Windows.Forms.Label();
-            this.lblUser4SelfDrawnLossTimes = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -93,7 +93,7 @@
             // 
             this.label_User1.AutoSize = true;
             this.label_User1.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_User1.Location = new System.Drawing.Point(71, 18);
+            this.label_User1.Location = new System.Drawing.Point(6, 18);
             this.label_User1.Name = "label_User1";
             this.label_User1.Size = new System.Drawing.Size(63, 21);
             this.label_User1.TabIndex = 1;
@@ -103,7 +103,7 @@
             // 
             this.label_User2.AutoSize = true;
             this.label_User2.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_User2.Location = new System.Drawing.Point(71, 18);
+            this.label_User2.Location = new System.Drawing.Point(6, 18);
             this.label_User2.Name = "label_User2";
             this.label_User2.Size = new System.Drawing.Size(63, 21);
             this.label_User2.TabIndex = 2;
@@ -113,7 +113,7 @@
             // 
             this.label_User3.AutoSize = true;
             this.label_User3.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_User3.Location = new System.Drawing.Point(71, 18);
+            this.label_User3.Location = new System.Drawing.Point(6, 18);
             this.label_User3.Name = "label_User3";
             this.label_User3.Size = new System.Drawing.Size(63, 21);
             this.label_User3.TabIndex = 3;
@@ -123,7 +123,7 @@
             // 
             this.label_User4.AutoSize = true;
             this.label_User4.Font = new System.Drawing.Font("新細明體", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label_User4.Location = new System.Drawing.Point(71, 18);
+            this.label_User4.Location = new System.Drawing.Point(6, 18);
             this.label_User4.Name = "label_User4";
             this.label_User4.Size = new System.Drawing.Size(63, 21);
             this.label_User4.TabIndex = 4;
@@ -295,6 +295,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
             // 
+            // lblUser1SelfDrawnLossTimes
+            // 
+            this.lblUser1SelfDrawnLossTimes.AutoSize = true;
+            this.lblUser1SelfDrawnLossTimes.Location = new System.Drawing.Point(7, 155);
+            this.lblUser1SelfDrawnLossTimes.Name = "lblUser1SelfDrawnLossTimes";
+            this.lblUser1SelfDrawnLossTimes.Size = new System.Drawing.Size(74, 12);
+            this.lblUser1SelfDrawnLossTimes.TabIndex = 17;
+            this.lblUser1SelfDrawnLossTimes.Text = "被自摸次數:0";
+            // 
             // lblUser1SelfDrawnWinTimes
             // 
             this.lblUser1SelfDrawnWinTimes.AutoSize = true;
@@ -336,6 +345,15 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "groupBox2";
+            // 
+            // lblUser2SelfDrawnLossTimes
+            // 
+            this.lblUser2SelfDrawnLossTimes.AutoSize = true;
+            this.lblUser2SelfDrawnLossTimes.Location = new System.Drawing.Point(7, 156);
+            this.lblUser2SelfDrawnLossTimes.Name = "lblUser2SelfDrawnLossTimes";
+            this.lblUser2SelfDrawnLossTimes.Size = new System.Drawing.Size(74, 12);
+            this.lblUser2SelfDrawnLossTimes.TabIndex = 18;
+            this.lblUser2SelfDrawnLossTimes.Text = "被自摸次數:0";
             // 
             // lblUser2SelfDrawnWinTimes
             // 
@@ -379,6 +397,15 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
+            // lblUser3SelfDrawnLossTimes
+            // 
+            this.lblUser3SelfDrawnLossTimes.AutoSize = true;
+            this.lblUser3SelfDrawnLossTimes.Location = new System.Drawing.Point(7, 157);
+            this.lblUser3SelfDrawnLossTimes.Name = "lblUser3SelfDrawnLossTimes";
+            this.lblUser3SelfDrawnLossTimes.Size = new System.Drawing.Size(74, 12);
+            this.lblUser3SelfDrawnLossTimes.TabIndex = 19;
+            this.lblUser3SelfDrawnLossTimes.Text = "被自摸次數:0";
+            // 
             // lblUser3SelfDrawnWinTimes
             // 
             this.lblUser3SelfDrawnWinTimes.AutoSize = true;
@@ -421,6 +448,15 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "groupBox4";
             // 
+            // lblUser4SelfDrawnLossTimes
+            // 
+            this.lblUser4SelfDrawnLossTimes.AutoSize = true;
+            this.lblUser4SelfDrawnLossTimes.Location = new System.Drawing.Point(7, 156);
+            this.lblUser4SelfDrawnLossTimes.Name = "lblUser4SelfDrawnLossTimes";
+            this.lblUser4SelfDrawnLossTimes.Size = new System.Drawing.Size(74, 12);
+            this.lblUser4SelfDrawnLossTimes.TabIndex = 20;
+            this.lblUser4SelfDrawnLossTimes.Text = "被自摸次數:0";
+            // 
             // lblUser4SelfDrawnWinTimes
             // 
             this.lblUser4SelfDrawnWinTimes.AutoSize = true;
@@ -447,42 +483,6 @@
             this.lblUser4WinTimes.Size = new System.Drawing.Size(62, 12);
             this.lblUser4WinTimes.TabIndex = 15;
             this.lblUser4WinTimes.Text = "胡牌次數:0";
-            // 
-            // lblUser1SelfDrawnLossTimes
-            // 
-            this.lblUser1SelfDrawnLossTimes.AutoSize = true;
-            this.lblUser1SelfDrawnLossTimes.Location = new System.Drawing.Point(7, 155);
-            this.lblUser1SelfDrawnLossTimes.Name = "lblUser1SelfDrawnLossTimes";
-            this.lblUser1SelfDrawnLossTimes.Size = new System.Drawing.Size(74, 12);
-            this.lblUser1SelfDrawnLossTimes.TabIndex = 17;
-            this.lblUser1SelfDrawnLossTimes.Text = "被自摸次數:0";
-            // 
-            // lblUser2SelfDrawnLossTimes
-            // 
-            this.lblUser2SelfDrawnLossTimes.AutoSize = true;
-            this.lblUser2SelfDrawnLossTimes.Location = new System.Drawing.Point(7, 156);
-            this.lblUser2SelfDrawnLossTimes.Name = "lblUser2SelfDrawnLossTimes";
-            this.lblUser2SelfDrawnLossTimes.Size = new System.Drawing.Size(74, 12);
-            this.lblUser2SelfDrawnLossTimes.TabIndex = 18;
-            this.lblUser2SelfDrawnLossTimes.Text = "被自摸次數:0";
-            // 
-            // lblUser3SelfDrawnLossTimes
-            // 
-            this.lblUser3SelfDrawnLossTimes.AutoSize = true;
-            this.lblUser3SelfDrawnLossTimes.Location = new System.Drawing.Point(7, 157);
-            this.lblUser3SelfDrawnLossTimes.Name = "lblUser3SelfDrawnLossTimes";
-            this.lblUser3SelfDrawnLossTimes.Size = new System.Drawing.Size(74, 12);
-            this.lblUser3SelfDrawnLossTimes.TabIndex = 19;
-            this.lblUser3SelfDrawnLossTimes.Text = "被自摸次數:0";
-            // 
-            // lblUser4SelfDrawnLossTimes
-            // 
-            this.lblUser4SelfDrawnLossTimes.AutoSize = true;
-            this.lblUser4SelfDrawnLossTimes.Location = new System.Drawing.Point(7, 156);
-            this.lblUser4SelfDrawnLossTimes.Name = "lblUser4SelfDrawnLossTimes";
-            this.lblUser4SelfDrawnLossTimes.Size = new System.Drawing.Size(74, 12);
-            this.lblUser4SelfDrawnLossTimes.TabIndex = 20;
-            this.lblUser4SelfDrawnLossTimes.Text = "被自摸次數:0";
             // 
             // Form1
             // 

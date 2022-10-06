@@ -31,6 +31,8 @@ namespace MahjongCount
         MahjongCount User3 = new MahjongCount();
         MahjongCount User4 = new MahjongCount();
         int clicktimes = 0;
+        Form2 f2;
+        public string WinnerName, ChuckName, SelfDrawmName;
 
         private void User1Win_Click(object sender, EventArgs e)
         {
@@ -39,15 +41,19 @@ namespace MahjongCount
             {
                 case "User1Win":
                     lblUser1WinTimes.Text = User1.Winning();
+                    WinnerName=label_User1.Text;
                     break;
                 case "User2Win":
                     lblUser2WinTimes.Text = User2.Winning();
+                    WinnerName = label_User2.Text;
                     break;
                 case "User3Win":
                     lblUser3WinTimes.Text = User3.Winning();
+                    WinnerName = label_User3.Text;
                     break;
                 case "User4Win":
                     lblUser4WinTimes.Text = User4.Winning();
+                    WinnerName = label_User4.Text;
                     break;
 
             }
@@ -70,18 +76,24 @@ namespace MahjongCount
             {
                 case "User1Chuck":
                     lblUser1ChuckTimes.Text = User1.Chuck();
+                    ChuckName=label_User1.Text;
                     break;
                 case "User2Chuck":
                     lblUser2ChuckTimes.Text = User2.Chuck();
+                    ChuckName = label_User2.Text;
                     break;
                 case "User3Chuck":
                     lblUser3ChuckTimes.Text = User3.Chuck();
+                    ChuckName = label_User3.Text;
                     break;
                 case "User4Chuck":
                     lblUser4ChuckTimes.Text = User4.Chuck();
+                    ChuckName = label_User4.Text;
                     break;
 
             }
+            f2 = new Form2(WinnerName,ChuckName);
+            f2.Show();
             
         }
        
