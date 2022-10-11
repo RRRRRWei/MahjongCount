@@ -12,16 +12,18 @@ namespace MahjongCount
 {
     public partial class Form2 : Form
     {
-        public Form2(string WinName,string ChuckName)
+        private Form1 f1;
+        public Form2(Form1 form1)
         {
+            f1 = form1;
             InitializeComponent();
-            lblWinName.Text = WinName;
-            lblChuckName.Text = ChuckName;
+            lblWinName.Text = Form1.WinnerName;
+            lblChuckName.Text = Form1.ChuckName;
         }
-
-        private void Form2_Load(object sender, EventArgs e)
+        public static int Points;
+        private void button1_Click(object sender, EventArgs e)
         {
-                     
+            Points = Convert.ToInt16(textBox1.Text);
         }
     }
 }

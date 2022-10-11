@@ -32,7 +32,9 @@ namespace MahjongCount
         MahjongCount User4 = new MahjongCount();
         int clicktimes = 0;
         Form2 f2;
-        public string WinnerName, ChuckName, SelfDrawmName;
+        Form3 f3;
+        public static string WinnerName, ChuckName, SelfDrawmName;
+        public static string btnWinName, btnChuckName;
 
         private void User1Win_Click(object sender, EventArgs e)
         {
@@ -41,18 +43,22 @@ namespace MahjongCount
             {
                 case "User1Win":
                     lblUser1WinTimes.Text = User1.Winning();
-                    WinnerName=label_User1.Text;
+                    btnWinName = BtnWin.Name;
+                    WinnerName =label_User1.Text;
                     break;
                 case "User2Win":
                     lblUser2WinTimes.Text = User2.Winning();
+                    btnWinName = BtnWin.Name;
                     WinnerName = label_User2.Text;
                     break;
                 case "User3Win":
                     lblUser3WinTimes.Text = User3.Winning();
+                    btnWinName = BtnWin.Name;
                     WinnerName = label_User3.Text;
                     break;
                 case "User4Win":
                     lblUser4WinTimes.Text = User4.Winning();
+                    btnWinName = BtnWin.Name;
                     WinnerName = label_User4.Text;
                     break;
 
@@ -68,11 +74,27 @@ namespace MahjongCount
             
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            f3=new Form3();
+            f3.ShowDialog();
+            f3.Focus();
+            if(f3.DialogResult == DialogResult.OK)
+            {
+                label_User1.Text = Form3.User1Name;
+                label_User2.Text = Form3.User2Name;
+                label_User3.Text = Form3.User3Name;
+                label_User4.Text = Form3.User4Name;
+                lblDi.Text += Form3.SetDi;
+                lblPoints.Text += Form3.SetPoints;
+            }
+            
+        }
 
         private void User1Chuck_Click(object sender, EventArgs e)
         {
-            Button BtnWin = (Button)sender;
-            switch (BtnWin.Name)
+            Button BtnChuck = (Button)sender;
+            switch (BtnChuck.Name)
             {
                 case "User1Chuck":
                     lblUser1ChuckTimes.Text = User1.Chuck();
@@ -92,9 +114,43 @@ namespace MahjongCount
                     break;
 
             }
-            f2 = new Form2(WinnerName,ChuckName);
-            f2.Show();
-            
+            f2 = new Form2(this);
+            f2.ShowDialog();
+            if (DialogResult != DialogResult.Cancel)
+            {
+                int setdi =Convert.ToInt16(Form3.SetDi);
+                int setpoints = Convert.ToInt16(Form3.SetPoints);
+                switch (BtnChuck.Name)
+                {
+                    case "User1Chuck":
+                        lblUser1Score.Text = "合計輸贏 : " + User1.ChuckCount(setdi, setpoints, Form2.Points);
+                        break;
+                    case "User2Chuck":
+                        lblUser2Score.Text = "合計輸贏 : " + User2.ChuckCount(setdi, setpoints, Form2.Points);
+                        break;
+                    case "User3Chuck":
+                        lblUser3Score.Text = "合計輸贏 : " + User3.ChuckCount(setdi, setpoints, Form2.Points);
+                        break;
+                    case "User4Chuck":
+                        lblUser4Score.Text = "合計輸贏 : " + User4.ChuckCount(setdi, setpoints, Form2.Points);
+                        break;
+                }
+                switch (btnWinName)
+                {
+                    case "User1Win":
+                            lblUser1Score.Text = "合計輸贏 : " + User1.WinCount(setdi, setpoints, Form2.Points);
+                            break;
+                    case "User2Win":
+                        lblUser2Score.Text = "合計輸贏 : " + User2.WinCount(setdi, setpoints, Form2.Points);
+                        break;
+                    case "User3Win":
+                        lblUser3Score.Text = "合計輸贏 : " + User3.WinCount(setdi, setpoints, Form2.Points);
+                        break;
+                    case "User4Win":
+                        lblUser4Score.Text = "合計輸贏 : " + User4.WinCount(setdi, setpoints, Form2.Points);
+                        break;
+                }
+            }
         }
        
 

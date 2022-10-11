@@ -8,12 +8,22 @@ namespace MahjongCount
 {
     public class MahjongCount
     {
-        public int Dolar;              //多少輸贏
+        public int Total;              //多少輸贏
         public int WinningTime;        //胡牌次數
         public int ChuckTime;          //放槍次數
         public int SelfDrawnLossTime;  //被自摸次數
         public int SelfDrawnWinTime;   //自摸次數
 
+        public string WinCount(int di,int setpoints,int points)
+        {
+            Total += di + points * setpoints;
+            return Total.ToString();
+        }
+        public string ChuckCount(int di, int setpoints, int points)
+        {
+            Total -= di + points * setpoints;
+            return Total.ToString();
+        }
         public string Winning()
         {
             WinningTime++;

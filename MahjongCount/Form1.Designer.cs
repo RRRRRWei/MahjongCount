@@ -50,25 +50,31 @@
             this.User4Win = new System.Windows.Forms.Button();
             this.User4Chuck = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblUser1Score = new System.Windows.Forms.Label();
             this.lblUser1SelfDrawnLossTimes = new System.Windows.Forms.Label();
             this.lblUser1SelfDrawnWinTimes = new System.Windows.Forms.Label();
             this.lblUser1WinTimes = new System.Windows.Forms.Label();
             this.lblUser1ChuckTimes = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblUser2Score = new System.Windows.Forms.Label();
             this.lblUser2SelfDrawnLossTimes = new System.Windows.Forms.Label();
             this.lblUser2SelfDrawnWinTimes = new System.Windows.Forms.Label();
             this.lblUser2WinTimes = new System.Windows.Forms.Label();
             this.lblUser2ChuckTimes = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblUser3Score = new System.Windows.Forms.Label();
             this.lblUser3SelfDrawnLossTimes = new System.Windows.Forms.Label();
             this.lblUser3SelfDrawnWinTimes = new System.Windows.Forms.Label();
             this.lblUser3WinTimes = new System.Windows.Forms.Label();
             this.lblUser3ChuckTimes = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblUser4Score = new System.Windows.Forms.Label();
             this.lblUser4SelfDrawnLossTimes = new System.Windows.Forms.Label();
             this.lblUser4SelfDrawnWinTimes = new System.Windows.Forms.Label();
             this.lblUser4ChuckTimes = new System.Windows.Forms.Label();
             this.lblUser4WinTimes = new System.Windows.Forms.Label();
+            this.lblDi = new System.Windows.Forms.Label();
+            this.lblPoints = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -83,7 +89,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("新細明體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label1.Location = new System.Drawing.Point(468, 310);
+            this.label1.Location = new System.Drawing.Point(439, 279);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(85, 24);
             this.label1.TabIndex = 0;
@@ -282,18 +288,29 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblUser1Score);
             this.groupBox1.Controls.Add(this.lblUser1SelfDrawnLossTimes);
             this.groupBox1.Controls.Add(this.lblUser1SelfDrawnWinTimes);
             this.groupBox1.Controls.Add(this.lblUser1WinTimes);
             this.groupBox1.Controls.Add(this.label_User1);
             this.groupBox1.Controls.Add(this.lblUser1ChuckTimes);
             this.groupBox1.Controls.Add(this.flowLayoutPanel1);
-            this.groupBox1.Location = new System.Drawing.Point(373, 358);
+            this.groupBox1.Location = new System.Drawing.Point(338, 330);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(296, 188);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "玩家1";
+            // 
+            // lblUser1Score
+            // 
+            this.lblUser1Score.AutoSize = true;
+            this.lblUser1Score.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblUser1Score.Location = new System.Drawing.Point(96, 22);
+            this.lblUser1Score.Name = "lblUser1Score";
+            this.lblUser1Score.Size = new System.Drawing.Size(75, 16);
+            this.lblUser1Score.TabIndex = 17;
+            this.lblUser1Score.Text = "合計輸贏:";
             // 
             // lblUser1SelfDrawnLossTimes
             // 
@@ -333,18 +350,29 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblUser2Score);
             this.groupBox2.Controls.Add(this.lblUser2SelfDrawnLossTimes);
             this.groupBox2.Controls.Add(this.lblUser2SelfDrawnWinTimes);
             this.groupBox2.Controls.Add(this.lblUser2WinTimes);
             this.groupBox2.Controls.Add(this.label_User2);
             this.groupBox2.Controls.Add(this.lblUser2ChuckTimes);
             this.groupBox2.Controls.Add(this.flowLayoutPanel2);
-            this.groupBox2.Location = new System.Drawing.Point(675, 227);
+            this.groupBox2.Location = new System.Drawing.Point(640, 196);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(296, 188);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "玩家2";
+            // 
+            // lblUser2Score
+            // 
+            this.lblUser2Score.AutoSize = true;
+            this.lblUser2Score.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblUser2Score.Location = new System.Drawing.Point(105, 27);
+            this.lblUser2Score.Name = "lblUser2Score";
+            this.lblUser2Score.Size = new System.Drawing.Size(75, 16);
+            this.lblUser2Score.TabIndex = 18;
+            this.lblUser2Score.Text = "合計輸贏:";
             // 
             // lblUser2SelfDrawnLossTimes
             // 
@@ -384,18 +412,29 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblUser3Score);
             this.groupBox3.Controls.Add(this.lblUser3SelfDrawnLossTimes);
             this.groupBox3.Controls.Add(this.lblUser3SelfDrawnWinTimes);
             this.groupBox3.Controls.Add(this.lblUser3WinTimes);
             this.groupBox3.Controls.Add(this.lblUser3ChuckTimes);
             this.groupBox3.Controls.Add(this.label_User3);
             this.groupBox3.Controls.Add(this.flowLayoutPanel3);
-            this.groupBox3.Location = new System.Drawing.Point(367, 82);
+            this.groupBox3.Location = new System.Drawing.Point(338, 51);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(296, 188);
             this.groupBox3.TabIndex = 13;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "groupBox3";
+            this.groupBox3.Text = "玩家3";
+            // 
+            // lblUser3Score
+            // 
+            this.lblUser3Score.AutoSize = true;
+            this.lblUser3Score.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblUser3Score.Location = new System.Drawing.Point(99, 23);
+            this.lblUser3Score.Name = "lblUser3Score";
+            this.lblUser3Score.Size = new System.Drawing.Size(75, 16);
+            this.lblUser3Score.TabIndex = 18;
+            this.lblUser3Score.Text = "合計輸贏:";
             // 
             // lblUser3SelfDrawnLossTimes
             // 
@@ -435,18 +474,29 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.lblUser4Score);
             this.groupBox4.Controls.Add(this.lblUser4SelfDrawnLossTimes);
             this.groupBox4.Controls.Add(this.lblUser4SelfDrawnWinTimes);
             this.groupBox4.Controls.Add(this.lblUser4ChuckTimes);
             this.groupBox4.Controls.Add(this.lblUser4WinTimes);
             this.groupBox4.Controls.Add(this.label_User4);
             this.groupBox4.Controls.Add(this.flowLayoutPanel4);
-            this.groupBox4.Location = new System.Drawing.Point(40, 227);
+            this.groupBox4.Location = new System.Drawing.Point(36, 196);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(296, 188);
             this.groupBox4.TabIndex = 14;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "groupBox4";
+            this.groupBox4.Text = "玩家4";
+            // 
+            // lblUser4Score
+            // 
+            this.lblUser4Score.AutoSize = true;
+            this.lblUser4Score.Font = new System.Drawing.Font("新細明體", 12F);
+            this.lblUser4Score.Location = new System.Drawing.Point(96, 27);
+            this.lblUser4Score.Name = "lblUser4Score";
+            this.lblUser4Score.Size = new System.Drawing.Size(75, 16);
+            this.lblUser4Score.TabIndex = 18;
+            this.lblUser4Score.Text = "合計輸贏:";
             // 
             // lblUser4SelfDrawnLossTimes
             // 
@@ -484,11 +534,33 @@
             this.lblUser4WinTimes.TabIndex = 15;
             this.lblUser4WinTimes.Text = "胡牌次數:0";
             // 
+            // lblDi
+            // 
+            this.lblDi.AutoSize = true;
+            this.lblDi.Font = new System.Drawing.Font("新細明體", 14F);
+            this.lblDi.Location = new System.Drawing.Point(19, 23);
+            this.lblDi.Name = "lblDi";
+            this.lblDi.Size = new System.Drawing.Size(33, 19);
+            this.lblDi.TabIndex = 15;
+            this.lblDi.Text = "底:";
+            // 
+            // lblPoints
+            // 
+            this.lblPoints.AutoSize = true;
+            this.lblPoints.Font = new System.Drawing.Font("新細明體", 14F);
+            this.lblPoints.Location = new System.Drawing.Point(81, 23);
+            this.lblPoints.Name = "lblPoints";
+            this.lblPoints.Size = new System.Drawing.Size(33, 19);
+            this.lblPoints.TabIndex = 16;
+            this.lblPoints.Text = "台:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 622);
+            this.ClientSize = new System.Drawing.Size(973, 542);
+            this.Controls.Add(this.lblPoints);
+            this.Controls.Add(this.lblDi);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -496,6 +568,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "麻將計算";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel3.ResumeLayout(false);
@@ -556,6 +629,12 @@
         private System.Windows.Forms.Label lblUser2SelfDrawnLossTimes;
         private System.Windows.Forms.Label lblUser3SelfDrawnLossTimes;
         private System.Windows.Forms.Label lblUser4SelfDrawnLossTimes;
+        private System.Windows.Forms.Label lblDi;
+        private System.Windows.Forms.Label lblPoints;
+        public System.Windows.Forms.Label lblUser1Score;
+        public System.Windows.Forms.Label lblUser2Score;
+        public System.Windows.Forms.Label lblUser3Score;
+        public System.Windows.Forms.Label lblUser4Score;
     }
 }
 
