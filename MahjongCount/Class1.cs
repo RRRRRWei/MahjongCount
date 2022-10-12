@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace MahjongCount
 {
@@ -14,10 +15,21 @@ namespace MahjongCount
         public int SelfDrawnLossTime;  //被自摸次數
         public int SelfDrawnWinTime;   //自摸次數
 
+       
+        public string SelfDrawmCount(int di, int setpoints, int points)
+        {
+            Total += (di + points * setpoints)*3;
+            return Total.ToString();
+        }
+        public string SelfDrawmLossCount(int di, int setpoints, int points)
+        {
+            Total -= (di + points * setpoints);
+            return Total.ToString();
+        }
         public string WinCount(int di,int setpoints,int points)
         {
             Total += di + points * setpoints;
-            return Total.ToString();
+            return Total.ToString();            
         }
         public string ChuckCount(int di, int setpoints, int points)
         {

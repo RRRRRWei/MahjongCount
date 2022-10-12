@@ -130,7 +130,7 @@
             this.Controls.Add(this.lblChuckName);
             this.Controls.Add(this.lblWinName);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "胡牌台數";
             this.ResumeLayout(false);
             this.PerformLayout();
 

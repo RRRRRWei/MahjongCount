@@ -33,8 +33,13 @@ namespace MahjongCount
         int clicktimes = 0;
         Form2 f2;
         Form3 f3;
+        Form4 f4;
         public static string WinnerName, ChuckName, SelfDrawmName;
         public static string btnWinName, btnChuckName;
+        public static int setdi, setpoints;
+
+
+
 
         private void User1Win_Click(object sender, EventArgs e)
         {
@@ -74,7 +79,7 @@ namespace MahjongCount
             
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public void Form1_Load(object sender, EventArgs e)
         {
             f3=new Form3();
             f3.ShowDialog();
@@ -87,9 +92,11 @@ namespace MahjongCount
                 label_User4.Text = Form3.User4Name;
                 lblDi.Text += Form3.SetDi;
                 lblPoints.Text += Form3.SetPoints;
-            }
-            
+                setdi = Convert.ToInt16(Form3.SetDi);
+                setpoints = Convert.ToInt16(Form3.SetPoints);
+            }    
         }
+        
 
         private void User1Chuck_Click(object sender, EventArgs e)
         {
@@ -118,8 +125,7 @@ namespace MahjongCount
             f2.ShowDialog();
             if (DialogResult != DialogResult.Cancel)
             {
-                int setdi =Convert.ToInt16(Form3.SetDi);
-                int setpoints = Convert.ToInt16(Form3.SetPoints);
+                
                 switch (BtnChuck.Name)
                 {
                     case "User1Chuck":
@@ -156,34 +162,70 @@ namespace MahjongCount
 
         private void User1SelfDrawn_Click(object sender, EventArgs e)
         {
-            Button BtnWin = (Button)sender;
-            switch (BtnWin.Name)
+            Button BtnSelfDrawn = (Button)sender;
+            switch (BtnSelfDrawn.Name)
             {
                 case "User1SelfDrawn":
+                    SelfDrawmName = label_User1.Text;
                     lblUser2SelfDrawnLossTimes.Text = User2.SelfDrawnLoss();
                     lblUser3SelfDrawnLossTimes.Text = User3.SelfDrawnLoss();
                     lblUser4SelfDrawnLossTimes.Text = User4.SelfDrawnLoss();                    
                     lblUser1SelfDrawnWinTimes.Text = User1.SelfDrawnWin();
                     break;
                 case "User2SelfDrawn":
+                    SelfDrawmName = label_User2.Text;
                     lblUser1SelfDrawnLossTimes.Text = User1.SelfDrawnLoss();
                     lblUser3SelfDrawnLossTimes.Text = User3.SelfDrawnLoss();
                     lblUser4SelfDrawnLossTimes.Text = User4.SelfDrawnLoss();
                     lblUser2SelfDrawnWinTimes.Text = User2.SelfDrawnWin();
                     break;
                 case "User3SelfDrawn":
+                    SelfDrawmName = label_User3.Text;
                     lblUser2SelfDrawnLossTimes.Text = User2.SelfDrawnLoss();
                     lblUser1SelfDrawnLossTimes.Text = User1.SelfDrawnLoss();
                     lblUser4SelfDrawnLossTimes.Text = User4.SelfDrawnLoss();
                     lblUser3SelfDrawnWinTimes.Text = User3.SelfDrawnWin();
                     break;
                 case "User4SelfDrawn":
+                    SelfDrawmName = label_User4.Text;
                     lblUser2SelfDrawnLossTimes.Text = User2.SelfDrawnLoss();
                     lblUser3SelfDrawnLossTimes.Text = User3.SelfDrawnLoss();
                     lblUser1SelfDrawnLossTimes.Text = User1.SelfDrawnLoss();
                     lblUser4SelfDrawnWinTimes.Text = User4.SelfDrawnWin();
                     break;
-            }          
+            }
+            f4 = new Form4(this);
+            f4.ShowDialog();
+            if (DialogResult != DialogResult.Cancel)
+            {
+                switch (BtnSelfDrawn.Name)
+                {
+                    case "User1SelfDrawn":
+                        lblUser1Score.Text = "合計輸贏 : " + User1.SelfDrawmCount(setdi, setpoints, Form4.Points);
+                        lblUser2Score.Text = "合計輸贏 : " + User2.SelfDrawmLossCount(setdi, setpoints, Form4.Points);
+                        lblUser3Score.Text = "合計輸贏 : " + User3.SelfDrawmLossCount(setdi, setpoints, Form4.Points);
+                        lblUser4Score.Text = "合計輸贏 : " + User4.SelfDrawmLossCount(setdi, setpoints, Form4.Points);
+                        break;
+                    case "User2SelfDrawn":
+                        lblUser2Score.Text = "合計輸贏 : " + User2.SelfDrawmCount(setdi, setpoints, Form4.Points);
+                        lblUser1Score.Text = "合計輸贏 : " + User1.SelfDrawmLossCount(setdi, setpoints, Form4.Points);
+                        lblUser3Score.Text = "合計輸贏 : " + User3.SelfDrawmLossCount(setdi, setpoints, Form4.Points);
+                        lblUser4Score.Text = "合計輸贏 : " + User4.SelfDrawmLossCount(setdi, setpoints, Form4.Points);
+                        break;
+                    case "User3SelfDrawn":
+                        lblUser3Score.Text = "合計輸贏 : " + User3.SelfDrawmCount(setdi, setpoints, Form4.Points);
+                        lblUser2Score.Text = "合計輸贏 : " + User2.SelfDrawmLossCount(setdi, setpoints, Form4.Points);
+                        lblUser1Score.Text = "合計輸贏 : " + User1.SelfDrawmLossCount(setdi, setpoints, Form4.Points);
+                        lblUser4Score.Text = "合計輸贏 : " + User4.SelfDrawmLossCount(setdi, setpoints, Form4.Points);
+                        break;
+                    case "User4SelfDrawn":
+                        lblUser4Score.Text = "合計輸贏 : " + User4.SelfDrawmCount(setdi, setpoints, Form4.Points);
+                        lblUser2Score.Text = "合計輸贏 : " + User2.SelfDrawmLossCount(setdi, setpoints, Form4.Points);
+                        lblUser3Score.Text = "合計輸贏 : " + User3.SelfDrawmLossCount(setdi, setpoints, Form4.Points);
+                        lblUser1Score.Text = "合計輸贏 : " + User1.SelfDrawmLossCount(setdi, setpoints, Form4.Points);
+                        break;
+                }
+            }
         }        
     }
 }
