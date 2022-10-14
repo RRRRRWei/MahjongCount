@@ -17,7 +17,7 @@ namespace MahjongCount
         {
             f1 = form1;
             InitializeComponent();
-            lblSelfDrawnName.Text = Form1.SelfDrawmName;
+            lblSelfDrawnName.Text = "自摸 : " + Form1.SelfDrawmName;
         }
         public static int Points;
         private void button1_Click(object sender, EventArgs e)

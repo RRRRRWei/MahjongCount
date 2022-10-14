@@ -22,6 +22,7 @@ namespace MahjongCount
         public static string User4Name;
         public static string SetDi;
         public static string SetPoints;
+        public static string StartBanker;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -34,6 +35,73 @@ namespace MahjongCount
             this.Close();
         }
 
-        
+        private void checkBox1_Click(object sender, EventArgs e)
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            if (checkBox.Checked == false)
+            {
+                switch (checkBox.Name)
+                {
+                    case "checkBox1":
+                        StartBanker = "User1";
+                        checkBox.Checked = true;
+                        checkBox2.Enabled = false;
+                        checkBox3.Enabled = false;
+                        checkBox4.Enabled = false;
+                        break;
+                    case "checkBox2":
+                        StartBanker = "User2";
+                        checkBox.Checked = true;
+                        checkBox1.Enabled = false;
+                        checkBox3.Enabled = false;
+                        checkBox4.Enabled = false;
+                        break;
+                    case "checkBox3":
+                        StartBanker = "User3";
+                        checkBox.Checked = true;
+                        checkBox2.Enabled = false;
+                        checkBox1.Enabled = false;
+                        checkBox4.Enabled = false;
+                        break;
+                    case "checkBox4":
+                        StartBanker = "User4";
+                        checkBox.Checked = true;
+                        checkBox2.Enabled = false;
+                        checkBox3.Enabled = false;
+                        checkBox1.Enabled = false;
+                        break;
+                }
+            }
+            else
+            {
+                switch (checkBox.Name)
+                {
+                    case "checkBox1":
+                        checkBox.Checked = false;
+                        checkBox2.Enabled = true;
+                        checkBox3.Enabled = true;
+                        checkBox4.Enabled = true;
+                        break;
+                    case "checkBox2":
+                        checkBox.Checked = false;
+                        checkBox1.Enabled = true;
+                        checkBox3.Enabled = true;
+                        checkBox4.Enabled = true;
+                        break;
+                    case "checkBox3":
+                        checkBox.Checked = false;
+                        checkBox2.Enabled = true;
+                        checkBox1.Enabled = true;
+                        checkBox4.Enabled = true;
+                        break;
+                    case "checkBox4":
+                        checkBox.Checked = false;
+                        checkBox2.Enabled = true;
+                        checkBox3.Enabled = true;
+                        checkBox1.Enabled = true;
+                        break;
+                }
+            }
+        }
     }
 }
