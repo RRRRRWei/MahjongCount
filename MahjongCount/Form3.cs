@@ -23,16 +23,36 @@ namespace MahjongCount
         public static string SetDi;
         public static string SetPoints;
         public static string StartBanker;
+        public static DialogResult dialogResult;
 
         private void button1_Click(object sender, EventArgs e)
         {
-            User1Name = txtUser1.Text;
-            User2Name = txtUser2.Text;
-            User3Name = txtUser3.Text;
-            User4Name = txtUser4.Text;
-            SetDi = txtDi.Text;
-            SetPoints = txtPoints.Text;
-            this.Close();
+            if(txtUser1.Text == "" || txtUser2.Text == "" || txtUser3.Text == "" || txtUser4.Text == "")
+            {
+                dialogResult = MessageBox.Show("請輸入玩家姓名", "提示訊息", MessageBoxButtons.OK);
+            }
+            else if(checkBox1.Checked==false&& checkBox2.Checked == false&& checkBox3.Checked == false && checkBox4.Checked == false)
+            {
+                dialogResult = MessageBox.Show("請勾選起始莊家", "提示訊息", MessageBoxButtons.OK);
+            }
+            else if (txtDi.Text=="")
+            {
+                dialogResult = MessageBox.Show("請輸入底", "提示訊息", MessageBoxButtons.OK);
+            }
+            else if (txtPoints.Text == "")
+            {
+                dialogResult = MessageBox.Show("請輸入台", "提示訊息", MessageBoxButtons.OK);
+            }
+            else
+            {
+                User1Name = txtUser1.Text;
+                User2Name = txtUser2.Text;
+                User3Name = txtUser3.Text;
+                User4Name = txtUser4.Text;
+                SetDi = txtDi.Text;
+                SetPoints = txtPoints.Text;
+                this.Close();
+            }            
         }
 
         private void checkBox1_Click(object sender, EventArgs e)
@@ -102,6 +122,12 @@ namespace MahjongCount
                         break;
                 }
             }
+        }
+
+        private void txtDi_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != '\b')
+                e.Handled = true;
         }
     }
 }

@@ -40,12 +40,12 @@ namespace MahjongCount
         string[] words = { "東", "南", "西", "北" };
         int word1, word2;
 
-        private string round() 
+        private string round()
         {
             if (word2 != 3)
                 word2++;
             else
-            {               
+            {
                 word1++;
                 word2 = 0;
                 if (word1 > 3)
@@ -53,7 +53,7 @@ namespace MahjongCount
             }
             return words[word1] + "風" + words[word2];
         }
-       
+
         private int otherbanker()
         {
             switch (Banker)
@@ -83,7 +83,7 @@ namespace MahjongCount
             {
                 case 1:
                     User1.Banker++;
-                    lblUser1Banker.Text = "莊連" + (User1.Banker-1).ToString();
+                    lblUser1Banker.Text = "莊連" + (User1.Banker - 1).ToString();
                     break;
                 case 2:
                     User2.Banker++;
@@ -151,26 +151,26 @@ namespace MahjongCount
             User1Chuck.Enabled = true;
             User2Chuck.Enabled = true;
             User3Chuck.Enabled = true;
-            User4Chuck.Enabled = true;            
+            User4Chuck.Enabled = true;
             Button BtnWin = (Button)sender;
             switch (BtnWin.Name)
             {
-                case "User1Win":                
-                    User1Chuck.Enabled = false;                    
+                case "User1Win":
+                    User1Chuck.Enabled = false;
                     btnWinName = BtnWin.Name;
-                    WinnerName =label_User1.Text;                    
+                    WinnerName = label_User1.Text;
                     break;
-                case "User2Win":                    
+                case "User2Win":
                     User2Chuck.Enabled = false;
                     btnWinName = BtnWin.Name;
                     WinnerName = label_User2.Text;
                     break;
-                case "User3Win":                    
+                case "User3Win":
                     User3Chuck.Enabled = false;
                     btnWinName = BtnWin.Name;
                     WinnerName = label_User3.Text;
                     break;
-                case "User4Win":                    
+                case "User4Win":
                     User4Chuck.Enabled = false;
                     btnWinName = BtnWin.Name;
                     WinnerName = label_User4.Text;
@@ -180,12 +180,18 @@ namespace MahjongCount
         }
 
         public void Form1_Load(object sender, EventArgs e)
-        {            
+        {
             this.Focus();
-            f3=new Form3();
+            f3 = new Form3();
             f3.ShowDialog();
             f3.Focus();
-            if(f3.DialogResult == DialogResult.OK)
+            while (Form3.dialogResult == DialogResult.OK)
+            {
+                Form3.dialogResult = DialogResult.Cancel;
+                f3 = new Form3();
+                f3.ShowDialog();
+            }
+            if (f3.DialogResult == DialogResult.OK)
             {
                 label_User1.Text = Form3.User1Name;
                 label_User2.Text = Form3.User2Name;
@@ -218,9 +224,9 @@ namespace MahjongCount
                         lblUser4Banker.Visible = true;
                         break;
                 }
-            }    
+            }
         }
-        
+
 
         private void User1Chuck_Click(object sender, EventArgs e)
         {
@@ -240,10 +246,10 @@ namespace MahjongCount
             switch (BtnChuck.Name)
             {
                 case "User1Chuck":
-                    ChuckName=label_User1.Text;
+                    ChuckName = label_User1.Text;
                     break;
                 case "User2Chuck":
-                    
+
                     ChuckName = label_User2.Text;
                     break;
                 case "User3Chuck":
@@ -255,10 +261,15 @@ namespace MahjongCount
 
             }
             f2 = new Form2(this);
-            f2.ShowDialog();            
+            f2.ShowDialog();
+            while (Form2.dialogResult == DialogResult.OK)
+            {
+                Form2.dialogResult = DialogResult.Cancel;
+                f2 = new Form2(this);
+                f2.ShowDialog();
+            }
             if (f2.DialogResult == DialogResult.OK)
             {
-                
                 switch (BtnChuck.Name)
                 {
                     case "User1Chuck":
@@ -280,7 +291,7 @@ namespace MahjongCount
                 }
                 switch (btnWinName)
                 {
-                    case "User1Win":                        
+                    case "User1Win":
                         if (Banker == 1)
                             continuebanker();
                         else
@@ -337,6 +348,12 @@ namespace MahjongCount
             }
             f4 = new Form4(this);
             f4.ShowDialog();
+            while (Form4.dialogResult == DialogResult.OK)
+            {
+                Form4.dialogResult = DialogResult.Cancel;
+                f4 = new Form4(this);
+                f4.ShowDialog();
+            }
             if (f4.DialogResult == DialogResult.OK)
             {                
                 switch (BtnSelfDrawn.Name)

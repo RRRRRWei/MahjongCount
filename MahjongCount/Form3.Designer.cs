@@ -147,6 +147,7 @@
             this.txtDi.Size = new System.Drawing.Size(46, 22);
             this.txtDi.TabIndex = 4;
             this.txtDi.Text = "30";
+            this.txtDi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDi_KeyPress);
             // 
             // txtPoints
             // 
@@ -155,6 +156,7 @@
             this.txtPoints.Size = new System.Drawing.Size(46, 22);
             this.txtPoints.TabIndex = 5;
             this.txtPoints.Text = "10";
+            this.txtPoints.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDi_KeyPress);
             // 
             // button1
             // 

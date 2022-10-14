@@ -20,9 +20,23 @@ namespace MahjongCount
             lblSelfDrawnName.Text = "自摸 : " + Form1.SelfDrawmName;
         }
         public static int Points;
+        public static DialogResult dialogResult;
         private void button1_Click(object sender, EventArgs e)
         {
-            Points = Convert.ToInt16(textBox1.Text);
+            if (textBox1.Text == "")
+            {
+                dialogResult = MessageBox.Show("請輸入自摸台數", "提示訊息", MessageBoxButtons.OK);
+            }
+            else
+            {
+                Points = Convert.ToInt16(textBox1.Text);
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != '\b')
+                e.Handled = true;
         }
     }
 }
