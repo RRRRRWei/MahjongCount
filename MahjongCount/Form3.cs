@@ -128,6 +128,6 @@ namespace MahjongCount
         {
             if ((e.KeyChar < '0' || e.KeyChar > '9') && e.KeyChar != '\b')
                 e.Handled = true;
-        }
+        }        
     }
 }

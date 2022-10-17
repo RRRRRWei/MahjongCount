@@ -184,7 +184,7 @@ namespace MahjongCount
             this.Focus();
             f3 = new Form3();
             f3.ShowDialog();
-            f3.Focus();
+            f3.Focus();            
             while (Form3.dialogResult == DialogResult.OK)
             {
                 Form3.dialogResult = DialogResult.Cancel;
