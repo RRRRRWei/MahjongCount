@@ -345,9 +345,9 @@
             this.lblUser1Score.Font = new System.Drawing.Font("新細明體", 12F);
             this.lblUser1Score.Location = new System.Drawing.Point(150, 22);
             this.lblUser1Score.Name = "lblUser1Score";
-            this.lblUser1Score.Size = new System.Drawing.Size(75, 16);
+            this.lblUser1Score.Size = new System.Drawing.Size(83, 16);
             this.lblUser1Score.TabIndex = 17;
-            this.lblUser1Score.Text = "合計輸贏:";
+            this.lblUser1Score.Text = "合計輸贏:0";
             // 
             // lblUser1SelfDrawnLossTimes
             // 
@@ -423,9 +423,9 @@
             this.lblUser2Score.Font = new System.Drawing.Font("新細明體", 12F);
             this.lblUser2Score.Location = new System.Drawing.Point(149, 21);
             this.lblUser2Score.Name = "lblUser2Score";
-            this.lblUser2Score.Size = new System.Drawing.Size(75, 16);
+            this.lblUser2Score.Size = new System.Drawing.Size(83, 16);
             this.lblUser2Score.TabIndex = 18;
-            this.lblUser2Score.Text = "合計輸贏:";
+            this.lblUser2Score.Text = "合計輸贏:0";
             // 
             // lblUser2SelfDrawnLossTimes
             // 
@@ -501,9 +501,9 @@
             this.lblUser3Score.Font = new System.Drawing.Font("新細明體", 12F);
             this.lblUser3Score.Location = new System.Drawing.Point(150, 23);
             this.lblUser3Score.Name = "lblUser3Score";
-            this.lblUser3Score.Size = new System.Drawing.Size(75, 16);
+            this.lblUser3Score.Size = new System.Drawing.Size(83, 16);
             this.lblUser3Score.TabIndex = 18;
-            this.lblUser3Score.Text = "合計輸贏:";
+            this.lblUser3Score.Text = "合計輸贏:0";
             // 
             // lblUser3SelfDrawnLossTimes
             // 
@@ -579,9 +579,9 @@
             this.lblUser4Score.Font = new System.Drawing.Font("新細明體", 12F);
             this.lblUser4Score.Location = new System.Drawing.Point(152, 22);
             this.lblUser4Score.Name = "lblUser4Score";
-            this.lblUser4Score.Size = new System.Drawing.Size(75, 16);
+            this.lblUser4Score.Size = new System.Drawing.Size(83, 16);
             this.lblUser4Score.TabIndex = 18;
-            this.lblUser4Score.Text = "合計輸贏:";
+            this.lblUser4Score.Text = "合計輸贏:0";
             // 
             // lblUser4SelfDrawnLossTimes
             // 
