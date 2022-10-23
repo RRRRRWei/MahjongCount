@@ -100,6 +100,12 @@ namespace MahjongCount
             }
         }
 
+        private void btnDraw_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("確定流局 ?", "提示訊息", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                continuebanker();
+
+        }
 
         private void changebanker()
         {
@@ -330,6 +336,7 @@ namespace MahjongCount
 
         private void User1SelfDrawn_Click(object sender, EventArgs e)
         {
+            bool CheckSelfDrawnIsBanker;
             Button BtnSelfDrawn = (Button)sender;
             switch (BtnSelfDrawn.Name)
             {
@@ -363,10 +370,14 @@ namespace MahjongCount
                         lblUser3SelfDrawnLossTimes.Text = User3.SelfDrawnLoss();
                         lblUser4SelfDrawnLossTimes.Text = User4.SelfDrawnLoss();
                         lblUser1SelfDrawnWinTimes.Text = User1.SelfDrawnWin();
+                        if (Banker == 1)
+                            CheckSelfDrawnIsBanker = true;
+                        else
+                            CheckSelfDrawnIsBanker = false;
                         lblUser1Score.Text = "合計輸贏 : " + User1.SelfDrawmCount(setdi, setpoints, Form4.Points, User1.Banker, otherbanker());
-                        lblUser2Score.Text = "合計輸贏 : " + User2.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User2.Banker);
-                        lblUser3Score.Text = "合計輸贏 : " + User3.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User3.Banker);
-                        lblUser4Score.Text = "合計輸贏 : " + User4.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User4.Banker);
+                        lblUser2Score.Text = "合計輸贏 : " + User2.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User2.Banker,otherbanker(), CheckSelfDrawnIsBanker);
+                        lblUser3Score.Text = "合計輸贏 : " + User3.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User3.Banker, otherbanker(), CheckSelfDrawnIsBanker);
+                        lblUser4Score.Text = "合計輸贏 : " + User4.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User4.Banker, otherbanker(), CheckSelfDrawnIsBanker);
                         if (Banker == 1)
                             continuebanker();
                         else
@@ -377,10 +388,14 @@ namespace MahjongCount
                         lblUser3SelfDrawnLossTimes.Text = User3.SelfDrawnLoss();
                         lblUser4SelfDrawnLossTimes.Text = User4.SelfDrawnLoss();
                         lblUser2SelfDrawnWinTimes.Text = User2.SelfDrawnWin();
+                        if (Banker == 2)
+                            CheckSelfDrawnIsBanker = true;
+                        else
+                            CheckSelfDrawnIsBanker = false;
                         lblUser2Score.Text = "合計輸贏 : " + User2.SelfDrawmCount(setdi, setpoints,Form4.Points,User2.Banker,otherbanker());
-                        lblUser1Score.Text = "合計輸贏 : " + User1.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User1.Banker);
-                        lblUser3Score.Text = "合計輸贏 : " + User3.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User3.Banker);
-                        lblUser4Score.Text = "合計輸贏 : " + User4.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User4.Banker);
+                        lblUser1Score.Text = "合計輸贏 : " + User1.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User1.Banker, otherbanker(), CheckSelfDrawnIsBanker);
+                        lblUser3Score.Text = "合計輸贏 : " + User3.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User3.Banker, otherbanker(), CheckSelfDrawnIsBanker);
+                        lblUser4Score.Text = "合計輸贏 : " + User4.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User4.Banker, otherbanker(), CheckSelfDrawnIsBanker);
                         if (Banker == 2)
                             continuebanker();
                         else
@@ -391,10 +406,14 @@ namespace MahjongCount
                         lblUser1SelfDrawnLossTimes.Text = User1.SelfDrawnLoss();
                         lblUser4SelfDrawnLossTimes.Text = User4.SelfDrawnLoss();
                         lblUser3SelfDrawnWinTimes.Text = User3.SelfDrawnWin();
+                        if (Banker == 3)
+                            CheckSelfDrawnIsBanker = true;
+                        else
+                            CheckSelfDrawnIsBanker = false;
                         lblUser3Score.Text = "合計輸贏 : " + User3.SelfDrawmCount(setdi,setpoints,Form4.Points,User3.Banker,otherbanker());
-                        lblUser2Score.Text = "合計輸贏 : " + User2.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User2.Banker);
-                        lblUser1Score.Text = "合計輸贏 : " + User1.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User1.Banker);
-                        lblUser4Score.Text = "合計輸贏 : " + User4.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User4.Banker);
+                        lblUser2Score.Text = "合計輸贏 : " + User2.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User2.Banker, otherbanker(), CheckSelfDrawnIsBanker);
+                        lblUser1Score.Text = "合計輸贏 : " + User1.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User1.Banker, otherbanker(), CheckSelfDrawnIsBanker);
+                        lblUser4Score.Text = "合計輸贏 : " + User4.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User4.Banker, otherbanker(), CheckSelfDrawnIsBanker);
                         if (Banker == 3)
                             continuebanker();
                         else
@@ -405,10 +424,14 @@ namespace MahjongCount
                         lblUser3SelfDrawnLossTimes.Text = User3.SelfDrawnLoss();
                         lblUser1SelfDrawnLossTimes.Text = User1.SelfDrawnLoss();
                         lblUser4SelfDrawnWinTimes.Text = User4.SelfDrawnWin();
+                        if (Banker == 4)
+                            CheckSelfDrawnIsBanker = true;
+                        else
+                            CheckSelfDrawnIsBanker = false;
                         lblUser4Score.Text = "合計輸贏 : " + User4.SelfDrawmCount(setdi, setpoints,Form4.Points,User4.Banker,otherbanker());
-                        lblUser2Score.Text = "合計輸贏 : " + User2.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User2.Banker);
-                        lblUser3Score.Text = "合計輸贏 : " + User3.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User3.Banker);
-                        lblUser1Score.Text = "合計輸贏 : " + User1.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User1.Banker);
+                        lblUser2Score.Text = "合計輸贏 : " + User2.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User2.Banker, otherbanker(), CheckSelfDrawnIsBanker);
+                        lblUser3Score.Text = "合計輸贏 : " + User3.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User3.Banker, otherbanker(), CheckSelfDrawnIsBanker);
+                        lblUser1Score.Text = "合計輸贏 : " + User1.SelfDrawmLossCount(setdi, setpoints, Form4.Points, User1.Banker, otherbanker(), CheckSelfDrawnIsBanker);
                         if (Banker == 4)
                             continuebanker();
                         else

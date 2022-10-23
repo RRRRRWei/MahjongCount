@@ -80,6 +80,7 @@
             this.lblUser4WinTimes = new System.Windows.Forms.Label();
             this.lblDi = new System.Windows.Forms.Label();
             this.lblPoints = new System.Windows.Forms.Label();
+            this.btnDraw = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
@@ -643,11 +644,23 @@
             this.lblPoints.TabIndex = 16;
             this.lblPoints.Text = "台:";
             // 
+            // btnDraw
+            // 
+            this.btnDraw.Font = new System.Drawing.Font("新細明體", 14F);
+            this.btnDraw.Location = new System.Drawing.Point(531, 261);
+            this.btnDraw.Name = "btnDraw";
+            this.btnDraw.Size = new System.Drawing.Size(84, 60);
+            this.btnDraw.TabIndex = 17;
+            this.btnDraw.Text = "流局";
+            this.btnDraw.UseVisualStyleBackColor = true;
+            this.btnDraw.Click += new System.EventHandler(this.btnDraw_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 542);
+            this.Controls.Add(this.btnDraw);
             this.Controls.Add(this.lblPoints);
             this.Controls.Add(this.lblDi);
             this.Controls.Add(this.groupBox4);
@@ -730,6 +743,7 @@
         private System.Windows.Forms.Label lblUser2Banker;
         private System.Windows.Forms.Label lblUser3Banker;
         private System.Windows.Forms.Label lblUser4Banker;
+        private System.Windows.Forms.Button btnDraw;
     }
 }
 

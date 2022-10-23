@@ -29,11 +29,14 @@ namespace MahjongCount
             }
             
         }
-        public string SelfDrawmLossCount(int di, int setpoints, int points,int mybanker)
+        public string SelfDrawmLossCount(int di, int setpoints, int points,int mybanker,int otherbanker, bool CheckSelfDrawnIsBanker)
         {
             if (mybanker == 0)
             {
-                Total -= (di + points * setpoints);
+                if (CheckSelfDrawnIsBanker)
+                    Total -= (di + (points + (2 * otherbanker - 1)) * setpoints);
+                else
+                    Total -= (di + points * setpoints);
                 return Total.ToString();
             }
             else
