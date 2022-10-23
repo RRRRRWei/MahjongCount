@@ -41,8 +41,11 @@
 * **計算自摸畫面**
 
     :warning::warning::warning:
-    自摸台數只需要計算自摸者本身的台數
+    
+    自摸台數只需要計算自摸者本身的台數。
+    
     若自摸者是莊家或是連莊則需要扣除莊家或連莊台數。
+    
     :warning::warning::warning:
 
     ![自摸台數畫面](https://github.com/RRRRRWei/MahjongCount/blob/master/%E9%BA%BB%E5%B0%87%E8%BC%B8%E8%B4%8F%E8%A8%88%E7%AE%97%E5%9C%96%E7%89%87/%E8%87%AA%E6%91%B8%E5%8F%B0%E6%95%B8%E8%A8%88%E7%AE%97.PNG)
