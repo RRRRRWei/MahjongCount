@@ -24,6 +24,13 @@
 * **計算畫面**
 
     ![計算畫面](https://github.com/RRRRRWei/MahjongCount/blob/master/%E9%BA%BB%E5%B0%87%E8%BC%B8%E8%B4%8F%E8%A8%88%E7%AE%97%E5%9C%96%E7%89%87/%E8%A8%88%E7%AE%97%E7%95%AB%E9%9D%A2.PNG)
+
+* **流局畫面**
+    ![流局確認畫面](https://github.com/RRRRRWei/MahjongCount/blob/master/%E9%BA%BB%E5%B0%87%E8%BC%B8%E8%B4%8F%E8%A8%88%E7%AE%97%E5%9C%96%E7%89%87/%E6%B5%81%E5%B1%80%E7%A2%BA%E8%AA%8D%E7%95%AB%E9%9D%A2.PNG)
+    *   按下確認後莊家會自動連莊
+    
+    ![按下流局確認後](https://github.com/RRRRRWei/MahjongCount/blob/master/%E9%BA%BB%E5%B0%87%E8%BC%B8%E8%B4%8F%E8%A8%88%E7%AE%97%E5%9C%96%E7%89%87/%E6%B5%81%E5%B1%80%E7%A2%BA%E8%AA%8D%E5%BE%8C.PNG)  
+    
 * **計算胡牌畫面**
     
     點選胡牌者和放槍者會跳出輸入台數畫面
